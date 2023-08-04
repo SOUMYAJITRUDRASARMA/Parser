@@ -1,0 +1,27 @@
+INSERT INTO mytable(atr1 ,atr2 ,atr3 ,atr4) VALUES ( bren , pro , op , super );
+INSERT INTO mytable2 VALUES ( bruh2 , pro2 , op2 , super2 );
+INSERT INTO mytable3 (atr1 ,atr2 ,atr3 ,atr4) VALUES ( bruh , pro , op , super );
+
+DELETE FROM mytable;
+DELETE FROM mytable WHERE age >= agetemp AND name = myname OR pro < toopro;
+
+
+SELECT atr, op FROM gtbl;
+SELECT atr, op FROM gtbl, btbl;
+SELECT atr, gtbl.op FROM gtbl;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl;
+
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl WHERE gtbl.atr >= winatr OR btbl.op = greatop;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl GROUP BY btbl.op;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl GROUP BY btbl.op HAVING btbl.op > opwin;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl WHERE gtbl.atr >= winatr OR btbl.op = greatop GROUP BY btbl.op;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl WHERE gtbl.atr >= winatr OR btbl.op = greatop GROUP BY btbl.op HAVING btbl.op > opwin;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl ORDER BY gtbl.atr;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl WHERE gtbl.atr >= winatr OR btbl.op = greatop ORDER BY gtbl.atr;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl GROUP BY btbl.op ORDER BY gtbl.atr;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl GROUP BY btbl.op HAVING btbl.op > opwin ORDER BY gtbl.atr;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl WHERE gtbl.atr >= winatr OR btbl.op = greatop GROUP BY btbl.op ORDER BY gtbl.atr;
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl WHERE gtbl.atr >= winatr OR btbl.op = greatop GROUP BY btbl.op HAVING btbl.op > opwin ORDER BY gtbl.atr;
+
+
+INSERT INTO dual VALUES(atr); INSERT INTO dual VALUES(atr);INSERT INTO dual VALUES(atr); INSERT INTO dual VALUES(atr);

@@ -1,0 +1,152 @@
+6
+EXP -> EXP + FAC
+EXP -> FAC
+FAC -> FAC * TER
+FAC -> TER
+TER -> ( EXP )
+TER -> id
+
+______________________________________________________________________
+
+
+[ Testing nullable construction ... ]
+
+10
+S -> A B C
+A -> E
+B -> A D
+C -> D ES
+D -> E
+ES -> F G
+F -> E
+G -> E
+H -> id
+I -> A H B
+
+
+______________________________________________________________________
+
+
+[ Testing Token Parsing ... ]
+
+5
+( lol
+id lol
++ lol
+id lol
+) lol
+
+4
+id lol
++ lol
+id lol
+) lol
+
+4
+( lol
+id lol
++ lol
+id lol
+
+21
+id lol
++ lol
+id lol
+* lol
+id lol
++ lol
+( lol
+id lol
+* lol
+( lol
+id lol
++ lol
+id lol
+* lol
+id lol
+) lol
++ lol
+id lol
+) lol
+* lol
+id lol
+
+
+
+______________________________________________________________________
+
+Real SQL Testing Token Parsing -->
+______________________________________________________________________
+
+14
+INSERT lol
+INTO lol
+ID lol
+VALUES lol
+( lol
+ID lol
+, lol
+ID lol
+, lol
+ID lol
+, lol
+ID lol
+) lol
+; lol
+
+______________________________________________________________________
+
+23
+INSERT lol
+INTO lol
+ID lol
+( lol
+ID lol
+, lol
+ID lol
+, lol
+ID lol
+, lol
+ID lol
+) lol
+VALUES lol
+( lol
+ID lol
+, lol
+ID lol
+, lol
+ID lol
+, lol
+ID lol
+) lol
+; lol
+
+______________________________________________________________________
+
+======================================================================
+
+EXAMPLE LEX -> 
+
+5
+add
+ADD
+so
+SO
+\n+\t+ 
+SEP
+in
+IN
+int
+INT
+
+*******************
+
+add
+so
+
+addso
+adso
+inaint
+
+______________________________________________________________________
+

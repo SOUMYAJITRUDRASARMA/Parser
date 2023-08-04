@@ -1,0 +1,1 @@
+SELECT gtbl.atr, btbl.op FROM gtbl, btbl HAVING btbl.op > opwin;

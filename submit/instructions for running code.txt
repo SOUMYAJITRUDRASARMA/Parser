@@ -1,0 +1,28 @@
+Unzip "SQL Project Codes" and compile and run main.cpp
+
+FILE DESCRIPTION -->
+________________
+
+(i)   input_lex.txt = Lexical Definations
+(ii)  input_prod.txt = Productions (Grammar)
+(iii) input_text.txt = SQL Code to verify
+(iv)  input_tokens.txt = Intermediate File (having tokens)
+(v)   util.hpp = Header File having class and functions
+
+
+================================================================
+
+
+OTHER FILES -->
+
+dfa.ipynb -> To create visual representation of DFA
+master_syntax_tree.ipynb -> To create visual representation of Master Syntax Tree
+
+
+================================================================
+
+
+In "input and output.zip" , we have input and output for 3 test cases -->
+    (1) Test Case 1: Exhaustive Testing (Result = Successful)
+    (2) Test Case 2: Number of attributes don't match (Result = Fatal Error)
+    (3) Test Case 3: Having without group by (Result = Not Successful -> Recovered Error)

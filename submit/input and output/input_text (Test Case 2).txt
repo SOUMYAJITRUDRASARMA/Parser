@@ -1,0 +1,1 @@
+INSERT INTO mytable(atr1 ,atr2 ,atr3) VALUES ( bren , pro , op , super );

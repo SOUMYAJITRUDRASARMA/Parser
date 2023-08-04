@@ -1,0 +1,42 @@
+41 s
+s -> stmt ; s
+s -> E
+stmt -> selst
+stmt -> insst
+stmt -> delst
+ide -> ID ide'
+ide' -> . ID
+ide' -> E
+selst -> SELECT idlste FROM idlist wherecl grpbycl ordercl
+idlist -> ID idlnul
+idlnul -> , ID idlnul
+idlnul -> E
+idlste -> ide idlnle
+idlnle -> , ide idlnle
+idlnle -> E
+wherecl -> WHERE cond
+wherecl -> E
+grpbycl -> GROUP BY idlste havngcl
+grpbycl -> E
+havngcl -> HAVING cond
+havngcl -> E
+ordercl -> ORDER BY idlste
+ordercl -> E
+cond -> unitcd cond'
+cond' -> cdjoin unitcd cond'
+cond' -> E
+cdjoin -> AND
+cdjoin -> OR
+unitcd -> NOT ( unitcd )
+unitcd -> ide compop ide
+compop -> =
+compop -> >
+compop -> <
+compop -> >=
+compop -> <=
+insst -> INSERT INTO ID insst1
+insst1 -> VALUES ( idlist )
+insst1 -> ( ID insst' ID )
+insst' -> , ID insst' ID ,
+insst' -> ) VALUES (
+delst -> DELETE FROM ID wherecl
